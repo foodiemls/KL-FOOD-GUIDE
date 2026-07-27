@@ -2,188 +2,203 @@
 <html>
 
 <head>
-    <title>KL Food Guide</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Food Guide</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
 
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #faf7f2;
-            color: #333;
-        }
+* {
+    box-sizing: border-box;
+}
 
 
-        /* Header */
+body {
 
-        header {
-            background: white;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#faf7f2;
+    color:#333;
 
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #5b3a29;
-        }
 
 
-        header p {
-            color: #777;
-            font-size: 16px;
-        }
+/* Header */
 
+header {
 
+    background:white;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 
-        /* Search */
+}
 
-        .search {
-            margin: 25px auto;
-            width: 90%;
-            max-width: 500px;
-        }
 
+header h1 {
 
-        .search input {
-            width: 100%;
-            padding: 15px;
-            border-radius: 30px;
-            border: none;
-            box-shadow: 0 3px 12px #ddd;
-            font-size: 16px;
-        }
+    margin:0;
+    font-size:36px;
+    color:#5b3a29;
 
+}
 
 
-        /* Category */
+header p {
 
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
+    color:#777;
 
+}
 
-        .category {
-            background: #fff;
-            padding: 10px 18px;
-            border-radius: 25px;
-            box-shadow: 0 3px 8px #ddd;
-            font-size: 14px;
-        }
 
 
+/* Category */
 
-        /* Restaurant card */
 
+.categories {
 
-        .container {
-            width: 90%;
-            max-width: 450px;
-            margin: auto;
-        }
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:25px;
 
+}
 
-        .card {
 
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
+.category {
 
-        }
+    background:white;
+    padding:10px 18px;
+    border-radius:20px;
+    box-shadow:0 3px 10px #ddd;
 
+}
 
 
-        .food-image {
 
-            height: 250px;
-            background:
-            linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
-            ),
-            url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57");
+/* Restaurant */
 
-            background-size: cover;
-            background-position: center;
 
-        }
+.container {
 
+    width:90%;
+    max-width:600px;
+    margin:auto;
 
+}
 
-        .content {
 
-            padding: 25px;
 
-        }
+.card {
 
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:40px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 
-        .content h2 {
+}
 
-            margin-top: 0;
-            color: #5b3a29;
 
-        }
 
+/* Photo gallery */
 
-        .info {
 
-            color: #666;
-            line-height: 1.8;
+.gallery {
 
-        }
+    display:flex;
+    overflow-x:auto;
+    gap:12px;
+    padding:15px;
 
+}
 
 
-        .tag {
 
-            display:inline-block;
-            background:#fff0d9;
-            padding:7px 14px;
-            border-radius:20px;
-            margin:5px 3px;
-            font-size:13px;
+.gallery img {
 
-        }
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px;
+    flex-shrink:0;
 
+}
 
 
-        .review {
 
-            background:#faf7f2;
-            padding:15px;
-            border-radius:15px;
-            margin-top:15px;
 
-        }
+.content {
 
+    padding:25px;
 
+}
 
-        footer {
 
-            text-align:center;
-            padding:30px;
-            color:#888;
+.content h2 {
 
-        }
+    color:#5b3a29;
 
+}
 
-    </style>
+
+
+.info {
+
+    line-height:1.8;
+    color:#666;
+
+}
+
+
+
+.tag {
+
+    display:inline-block;
+    background:#fff0d9;
+    padding:7px 12px;
+    border-radius:20px;
+    margin:5px 3px;
+    font-size:13px;
+
+}
+
+
+
+.review {
+
+    background:#faf7f2;
+    padding:15px;
+    border-radius:15px;
+
+}
+
+
+
+.score {
+
+    line-height:1.8;
+
+}
+
+
+
+footer {
+
+    text-align:center;
+    padding:30px;
+    color:#888;
+
+}
+
+
+</style>
+
 
 </head>
 
@@ -200,16 +215,7 @@
 Discover hidden gems and local favourites around Kuala Lumpur.
 </p>
 
-
-<div class="search">
-
-<input placeholder="Search food, cafe, dessert...">
-
-</div>
-
-
 </header>
-
 
 
 
@@ -219,12 +225,9 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 
 <div class="category">☕ Cafe</div>
 
-<div class="category">🍜 Japanese</div>
-
-<div class="category">🍔 Burger</div>
+<div class="category">🍜 Food</div>
 
 </div>
-
 
 
 
@@ -232,10 +235,28 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 <div class="container">
 
 
+
+
+
+<!-- GELULU -->
+
 <div class="card">
 
 
-<div class="food-image"></div>
+<div class="gallery">
+
+<img src="images/gelulu2.jpg">
+<img src="images/gelulu4.jpg">
+<img src="images/gelulu10.jpg">
+<img src="images/gelulu3.jpg">
+<img src="images/gelulu5.jpg">
+<img src="images/gelulu6.jpg">
+<img src="images/gelulu7.jpg">
+<img src="images/gelulu9.jpg">
+<img src="images/gelulu8.jpg">
+
+</div>
+
 
 
 <div class="content">
@@ -246,67 +267,77 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 
 <div class="info">
 
-📍 Pasar Seni, Kuala Lumpur
+📍 Jalan Tun H S Lee, Pasar Seni
 
 <br>
 
-💰 RM15/person
+💰 RM10-20/person
 
 <br>
 
-⭐ Rating: 8.5/10
-
-</div>
-
-
-
-<br>
-
-
-<div class="tag">
 🍨 Dessert
+
+<br>
+
+🚆 5 minutes walk from LRT station
+
+</div>
+
+
+
+<div class="tag">
+🍦 Dessert
 </div>
 
 
 <div class="tag">
-💰 Affordable
-</div>
-
-
-<div class="tag">
-📸 Photo Spot
+❤️ Chill Place
 </div>
 
 
 
+<h3>⭐ Honest Review</h3>
 
-<h3>Why we love it ❤️</h3>
+
+<div class="score">
+
+🍽 Food: 7/10
+
+<br>
+
+💰 Value: 6/10
+
+<br>
+
+🌿 Environment: 7/10
+
+</div>
+
+
+
+<h3>🍦 Must Try</h3>
 
 
 <ul>
 
-<li>Relaxing atmosphere</li>
+<li>Pistachio Gelato</li>
 
-<li>Good place for friends gathering</li>
-
-<li>Affordable dessert option</li>
+<li>Peanut Butter Gelato</li>
 
 </ul>
-
 
 
 
 <div class="review">
 
 
-<b>💬 Honest Thoughts</b>
+<p>
+The gelato is not overly sweet and has unique flavours that do not taste artificial.
+</p>
 
 
 <p>
-
-A cozy gelato spot near Pasar Seni.
-The chill environment makes it suitable for chatting with friends and enjoying a sweet treat.
-
+The environment is cosy with air-conditioning and a quality sound system playing relaxing music.
 </p>
 
 
@@ -315,13 +346,39 @@ The chill environment makes it suitable for chatting with friends and enjoying a
 
 
 
-<h3>
-Would I come back?
-</h3>
+<h3>👥 Suitable For</h3>
 
 
 <p>
-✅ Yes, especially for a casual dessert hangout.
+
+Friends gathering, chit-chatting, and couple dessert dates.
+
+</p>
+
+
+
+<h3>🕒 Opening Hours</h3>
+
+
+<p>
+
+Daily: 12PM - 10:30PM
+
+<br>
+
+Friday & Saturday: 12PM - 1AM
+
+</p>
+
+
+
+<h3>🔄 Would I Come Back?</h3>
+
+
+<p>
+
+✅ Yes. They update flavours regularly, including special flavours like Pu'er and Thai Tea.
+
 </p>
 
 
@@ -332,7 +389,180 @@ Would I come back?
 </div>
 
 
+
+
+
+
+
+
+
+<!-- XIAO BY NHX -->
+
+
+<div class="card">
+
+
+<div class="gallery">
+
+
+<img src="images/xiao1.jpg">
+
+<img src="images/xiao2.jpg">
+
+<img src="images/xiao3.jpg">
+
+<img src="images/xiao4.jpg">
+
+<img src="images/xiao5.jpg">
+
+
 </div>
+
+
+
+<div class="content">
+
+
+
+<h2>🥭 XIAO BY NHX</h2>
+
+
+
+<div class="info">
+
+
+📍 Jalan Petaling, Pasar Seni
+
+<br>
+
+💰 RM10-20/person
+
+<br>
+
+🍨 Dessert
+
+<br>
+
+🚆 Right outside Pasar Seni LRT Station
+
+
+</div>
+
+
+
+
+<div class="tag">
+🥭 Dessert
+</div>
+
+
+<div class="tag">
+🚆 Convenient Location
+</div>
+
+
+
+<h3>⭐ Honest Review</h3>
+
+
+<div class="score">
+
+
+🍽 Food: 8/10
+
+<br>
+
+💰 Value: 6/10
+
+<br>
+
+🌿 Environment: 6/10
+
+
+</div>
+
+
+
+<h3>🍮 Must Try</h3>
+
+
+<ul>
+
+<li>Mango Pomelo Nectar</li>
+
+<li>Taro Mochi Cloud Milk</li>
+
+
+</ul>
+
+
+
+<div class="review">
+
+
+<p>
+
+The desserts are not overly sweet, with layered textures and authentic ingredients.
+
+</p>
+
+
+<p>
+
+The shop is air-conditioned but has limited seating.
+More suitable for takeaway or a quick rest.
+
+</p>
+
+
+</div>
+
+
+
+<h3>👥 Suitable For</h3>
+
+
+<p>
+
+A short break after walking around Pasar Seni, or grabbing a drink while exploring the area.
+
+</p>
+
+
+
+<h3>🕒 Opening Hours</h3>
+
+
+<p>
+
+Daily: 12PM - 10PM
+
+</p>
+
+
+
+
+<h3>🔄 Would I Come Back?</h3>
+
+
+<p>
+
+✅ Yes. The milk tea has a nice aroma and good texture.
+
+</p>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
 
 
 
@@ -341,6 +571,7 @@ Would I come back?
 KL Food Guide © 2026
 
 </footer>
+
 
 
 
