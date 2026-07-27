@@ -4,130 +4,324 @@
 <head>
     <title>KL Food Guide</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
 
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #fffaf5;
+            margin: 0;
+            background: #faf7f2;
+            color: #333;
         }
 
-        h1 {
-            color: #8b4513;
-        }
 
-        .restaurant {
+        /* Header */
+
+        header {
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            max-width: 400px;
-            box-shadow: 0 4px 12px #ddd;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        img {
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #5b3a29;
+        }
+
+
+        header p {
+            color: #777;
+            font-size: 16px;
+        }
+
+
+
+        /* Search */
+
+        .search {
+            margin: 25px auto;
+            width: 90%;
+            max-width: 500px;
+        }
+
+
+        .search input {
             width: 100%;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 3px 12px #ddd;
+            font-size: 16px;
         }
 
-        .tag {
-            display: inline-block;
-            background: #ffe4c4;
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin: 5px;
+
+
+        /* Category */
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+
+        .category {
+            background: #fff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            box-shadow: 0 3px 8px #ddd;
             font-size: 14px;
         }
 
-        .rating {
-            line-height: 1.8;
+
+
+        /* Restaurant card */
+
+
+        .container {
+            width: 90%;
+            max-width: 450px;
+            margin: auto;
         }
+
+
+        .card {
+
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+
+        }
+
+
+
+        .food-image {
+
+            height: 250px;
+            background:
+            linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+            ),
+            url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57");
+
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+
+        .content {
+
+            padding: 25px;
+
+        }
+
+
+        .content h2 {
+
+            margin-top: 0;
+            color: #5b3a29;
+
+        }
+
+
+        .info {
+
+            color: #666;
+            line-height: 1.8;
+
+        }
+
+
+
+        .tag {
+
+            display:inline-block;
+            background:#fff0d9;
+            padding:7px 14px;
+            border-radius:20px;
+            margin:5px 3px;
+            font-size:13px;
+
+        }
+
+
+
+        .review {
+
+            background:#faf7f2;
+            padding:15px;
+            border-radius:15px;
+            margin-top:15px;
+
+        }
+
+
+
+        footer {
+
+            text-align:center;
+            padding:30px;
+            color:#888;
+
+        }
+
 
     </style>
 
 </head>
 
 
+
 <body>
 
+
+<header>
 
 <h1>🍜 KL Food Guide</h1>
 
 <p>
-Discover hidden gems and local favourites in Kuala Lumpur & PJ.
+Discover hidden gems and local favourites around Kuala Lumpur.
 </p>
 
 
+<div class="search">
 
-<div class="restaurant">
+<input placeholder="Search food, cafe, dessert...">
+
+</div>
+
+
+</header>
+
+
+
+
+<div class="categories">
+
+<div class="category">🍨 Dessert</div>
+
+<div class="category">☕ Cafe</div>
+
+<div class="category">🍜 Japanese</div>
+
+<div class="category">🍔 Burger</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<div class="food-image"></div>
+
+
+<div class="content">
 
 
 <h2>🍨 Gelulu Gelato</h2>
 
 
-<p>
+<div class="info">
+
 📍 Pasar Seni, Kuala Lumpur
-</p>
+
+<br>
+
+💰 RM15/person
+
+<br>
+
+⭐ Rating: 8.5/10
+
+</div>
 
 
-<p>
-💰 Average Price: RM15/person
-</p>
+
+<br>
 
 
 <div class="tag">
 🍨 Dessert
 </div>
 
-<div class="tag">
-📸 Cafe Spot
-</div>
 
 <div class="tag">
-💰 Budget Friendly
+💰 Affordable
+</div>
+
+
+<div class="tag">
+📸 Photo Spot
 </div>
 
 
 
-<h3>⭐ Our Review</h3>
 
-<div class="rating">
+<h3>Why we love it ❤️</h3>
 
-<p>
-Taste: 7/10
-<br>
-Value: 6/10
-<br>
-Ambience: 8/10
-</p>
-
-</div>
-
-
-
-<h3>🍦 Must Try</h3>
 
 <ul>
-<li>Pistachio</li>
-<li>Peanut Butter</li>
+
+<li>Relaxing atmosphere</li>
+
+<li>Good place for friends gathering</li>
+
+<li>Affordable dessert option</li>
+
 </ul>
 
 
 
 
-<h3>💬 Honest Thoughts</h3>
+<div class="review">
+
+
+<b>💬 Honest Thoughts</b>
+
 
 <p>
-A cozy gelato spot near Pasar Seni with a relaxing atmosphere.
-Suitable for hanging out with friends and having a sweet treat.
+
+A cozy gelato spot near Pasar Seni.
+The chill environment makes it suitable for chatting with friends and enjoying a sweet treat.
+
 </p>
 
 
+</div>
 
 
-<h3>Would I come back?</h3>
+
+
+<h3>
+Would I come back?
+</h3>
+
 
 <p>
-✅ Yes. The chill environment makes it a nice place to relax and chat with friends.
+✅ Yes, especially for a casual dessert hangout.
 </p>
 
 
@@ -135,6 +329,22 @@ Suitable for hanging out with friends and having a sweet treat.
 </div>
 
 
+</div>
+
+
+</div>
+
+
+
+<footer>
+
+KL Food Guide © 2026
+
+</footer>
+
+
+
 </body>
+
 
 </html>
