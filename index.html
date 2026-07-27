@@ -10,7 +10,6 @@
 
 <style>
 
-
 * {
     box-sizing: border-box;
 }
@@ -56,7 +55,38 @@ header p {
 
 
 
-/* Category */
+/* Search */
+
+.search {
+
+    margin:25px auto 0;
+    max-width:500px;
+
+}
+
+
+.search input {
+
+    width:100%;
+    padding:15px 20px;
+    border-radius:30px;
+    border:none;
+    box-shadow:0 3px 12px #ddd;
+    font-size:16px;
+
+}
+
+
+
+/* Filter */
+
+.filter-title {
+
+    text-align:center;
+    margin-top:25px;
+    color:#555;
+
+}
 
 
 .categories {
@@ -65,7 +95,7 @@ header p {
     justify-content:center;
     gap:10px;
     flex-wrap:wrap;
-    margin:25px;
+    margin:15px 20px;
 
 }
 
@@ -73,21 +103,31 @@ header p {
 .category {
 
     background:white;
-    padding:10px 18px;
-    border-radius:20px;
+    padding:10px 16px;
+    border-radius:25px;
+    border:none;
     box-shadow:0 3px 10px #ddd;
+    cursor:pointer;
+    font-size:14px;
+
+}
+
+
+.category:hover {
+
+    background:#fff0d9;
 
 }
 
 
 
-/* Restaurant */
 
+/* Restaurant */
 
 .container {
 
     width:90%;
-    max-width:600px;
+    max-width:650px;
     margin:auto;
 
 }
@@ -99,15 +139,14 @@ header p {
     background:white;
     border-radius:20px;
     overflow:hidden;
-    margin-bottom:40px;
+    margin:40px 0;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
 
 }
 
 
 
-/* Photo gallery */
-
+/* Gallery */
 
 .gallery {
 
@@ -117,7 +156,6 @@ header p {
     padding:15px;
 
 }
-
 
 
 .gallery img {
@@ -140,6 +178,7 @@ header p {
 }
 
 
+
 .content h2 {
 
     color:#5b3a29;
@@ -157,14 +196,23 @@ header p {
 
 
 
+
 .tag {
 
     display:inline-block;
     background:#fff0d9;
     padding:7px 12px;
     border-radius:20px;
-    margin:5px 3px;
+    margin:8px 3px;
     font-size:13px;
+
+}
+
+
+
+.score {
+
+    line-height:1.9;
 
 }
 
@@ -175,14 +223,6 @@ header p {
     background:#faf7f2;
     padding:15px;
     border-radius:15px;
-
-}
-
-
-
-.score {
-
-    line-height:1.8;
 
 }
 
@@ -209,25 +249,121 @@ footer {
 
 <header>
 
+
 <h1>🍜 KL Food Guide</h1>
+
 
 <p>
 Discover hidden gems and local favourites around Kuala Lumpur.
 </p>
 
+
+
+<div class="search">
+
+<input 
+id="searchInput"
+placeholder="Search restaurant or location..."
+onkeyup="searchFood()">
+
+</div>
+
+
 </header>
 
 
 
+
+
+<h3 class="filter-title">
+🍴 Category
+</h3>
+
+
 <div class="categories">
 
-<div class="category">🍨 Dessert</div>
 
-<div class="category">☕ Cafe</div>
+<button class="category" onclick="filterFood('all')">
+🔍 All
+</button>
 
-<div class="category">🍜 Food</div>
+
+<button class="category" onclick="filterFood('chinese')">
+🥢 Chinese
+</button>
+
+
+<button class="category" onclick="filterFood('japanese')">
+🍣 Japanese
+</button>
+
+
+<button class="category" onclick="filterFood('western')">
+🍔 Western
+</button>
+
+
+<button class="category" onclick="filterFood('cafe')">
+☕ Cafe
+</button>
+
+
+<button class="category" onclick="filterFood('dessert')">
+🍨 Dessert
+</button>
+
+
+<button class="category" onclick="filterFood('cake')">
+🍰 Cake
+</button>
+
+
+<button class="category" onclick="filterFood('buffet')">
+🍱 Buffet
+</button>
+
+
+<button class="category" onclick="filterFood('fine-dine')">
+✨ Fine Dining
+</button>
+
 
 </div>
+
+
+
+
+
+<h3 class="filter-title">
+💰 Budget
+</h3>
+
+
+<div class="categories">
+
+
+<button class="category" onclick="filterFood('all')">
+All Price
+</button>
+
+
+<button class="category" onclick="filterFood('under20')">
+💰 Under RM20
+</button>
+
+
+<button class="category" onclick="filterFood('mid')">
+💰💰 RM20-50
+</button>
+
+
+<button class="category" onclick="filterFood('premium')">
+💰💰💰 Above RM50
+</button>
+
+
+</div>
+
 
 
 
@@ -236,11 +372,12 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 
 
 
-
-
 <!-- GELULU -->
 
-<div class="card">
+<div class="card"
+data-category="dessert"
+data-price="under20"
+data-name="gelulu gelato pasarseni">
 
 
 <div class="gallery">
@@ -250,13 +387,8 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 <img src="images/Gelulu10.jpeg">
 <img src="images/Gelulu3.jpeg">
 <img src="images/Gelulu5.jpeg">
-<img src="images/Gelulu6.jpeg">
-<img src="images/Gelulu7.jpeg">
-<img src="images/Gelulu9.jpeg">
-<img src="images/Gelulu8.jpeg">
 
 </div>
-
 
 
 <div class="content">
@@ -284,7 +416,6 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 </div>
 
 
-
 <div class="tag">
 🍦 Dessert
 </div>
@@ -293,7 +424,6 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 <div class="tag">
 ❤️ Chill Place
 </div>
-
 
 
 <h3>⭐ Honest Review</h3>
@@ -314,7 +444,6 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 </div>
 
 
-
 <h3>🍦 Must Try</h3>
 
 
@@ -327,9 +456,7 @@ Discover hidden gems and local favourites around Kuala Lumpur.
 </ul>
 
 
-
 <div class="review">
-
 
 <p>
 The gelato is not overly sweet and has unique flavours that do not taste artificial.
@@ -343,54 +470,33 @@ The environment is cosy with air-conditioning and a quality sound system playing
 
 </div>
 
-
-
-
 <h3>👥 Suitable For</h3>
 
-
 <p>
-
 Friends gathering, chit-chatting, and couple dessert dates.
-
 </p>
-
 
 
 <h3>🕒 Opening Hours</h3>
 
-
 <p>
-
 Daily: 12PM - 10:30PM
-
 <br>
-
 Friday & Saturday: 12PM - 1AM
-
 </p>
-
 
 
 <h3>🔄 Would I Come Back?</h3>
 
-
 <p>
-
 ✅ Yes. They update flavours regularly, including special flavours like Pu'er and Thai Tea.
-
 </p>
 
 
 
 </div>
 
-
 </div>
-
-
-
-
 
 
 
@@ -399,7 +505,11 @@ Friday & Saturday: 12PM - 1AM
 <!-- XIAO BY NHX -->
 
 
-<div class="card">
+<div class="card"
+data-category="dessert"
+data-price="under20"
+data-name="xiao by nhx pasarseni">
+
 
 
 <div class="gallery">
@@ -427,7 +537,6 @@ Friday & Saturday: 12PM - 1AM
 <h2>🥭 XIAO BY NHX</h2>
 
 
-
 <div class="info">
 
 
@@ -450,7 +559,6 @@ Friday & Saturday: 12PM - 1AM
 
 
 
-
 <div class="tag">
 🥭 Dessert
 </div>
@@ -467,7 +575,6 @@ Friday & Saturday: 12PM - 1AM
 
 <div class="score">
 
-
 🍽 Food: 8/10
 
 <br>
@@ -478,8 +585,8 @@ Friday & Saturday: 12PM - 1AM
 
 🌿 Environment: 6/10
 
-
 </div>
+
 
 
 
@@ -492,7 +599,6 @@ Friday & Saturday: 12PM - 1AM
 
 <li>Taro Mochi Cloud Milk</li>
 
-
 </ul>
 
 
@@ -501,17 +607,13 @@ Friday & Saturday: 12PM - 1AM
 
 
 <p>
-
 The desserts are not overly sweet, with layered textures and authentic ingredients.
-
 </p>
 
 
 <p>
-
 The shop is air-conditioned but has limited seating.
 More suitable for takeaway or a quick rest.
-
 </p>
 
 
@@ -519,14 +621,14 @@ More suitable for takeaway or a quick rest.
 
 
 
+
 <h3>👥 Suitable For</h3>
 
 
 <p>
-
 A short break after walking around Pasar Seni, or grabbing a drink while exploring the area.
-
 </p>
+
 
 
 
@@ -534,9 +636,7 @@ A short break after walking around Pasar Seni, or grabbing a drink while explori
 
 
 <p>
-
 Daily: 12PM - 10PM
-
 </p>
 
 
@@ -546,14 +646,11 @@ Daily: 12PM - 10PM
 
 
 <p>
-
 ✅ Yes. The milk tea has a nice aroma and good texture.
-
 </p>
 
 
 
-
 </div>
 
 
@@ -562,6 +659,7 @@ Daily: 12PM - 10PM
 
 
 </div>
+
 
 
 
@@ -572,6 +670,109 @@ KL Food Guide © 2026
 
 </footer>
 
+
+
+
+
+<script>
+
+
+// Category + Budget Filter
+
+function filterFood(filter){
+
+
+let cards = document.querySelectorAll(".card");
+
+
+cards.forEach(function(card){
+
+
+let category = card.getAttribute("data-category");
+
+let price = card.getAttribute("data-price");
+
+
+
+if(
+filter === "all" ||
+category === filter ||
+price === filter
+)
+
+{
+
+card.style.display="block";
+
+}
+
+else
+
+{
+
+card.style.display="none";
+
+}
+
+
+});
+
+
+}
+
+
+
+
+
+// Search Function
+
+
+function searchFood(){
+
+
+let input = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
+
+
+let cards = document.querySelectorAll(".card");
+
+
+
+cards.forEach(function(card){
+
+
+let name = card.getAttribute("data-name");
+
+
+
+if(name.includes(input))
+
+{
+
+card.style.display="block";
+
+}
+
+else
+
+{
+
+card.style.display="none";
+
+}
+
+
+});
+
+
+}
+
+
+
+</script>
 
 
 
