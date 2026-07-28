@@ -388,3 +388,161 @@ sitemap
 console.log(
 "Sitemap generated"
 );
+
+// ==========================
+// Generate category pages
+// ==========================
+
+
+const categoryTemplate = fs.readFileSync(
+
+"templates/category-template.html",
+
+"utf8"
+
+);
+
+
+
+const categories = [
+
+"dessert",
+"cafe",
+"japanese",
+"chinese",
+"western"
+
+];
+
+
+
+if(!fs.existsSync("categories")){
+
+fs.mkdirSync("categories");
+
+}
+
+
+
+categories.forEach(function(category){
+
+
+
+let html = categoryTemplate;
+
+
+
+let filtered = restaurants.filter(function(item){
+
+
+return item.category === category;
+
+
+});
+
+
+
+let restaurantList = filtered.map(function(item){
+
+
+return `
+
+<div class="card">
+
+
+<h2>
+
+<a href="../restaurants/${item.id}.html">
+
+${item.name}
+
+</a>
+
+</h2>
+
+
+<p>
+
+📍 ${item.address}
+
+</p>
+
+
+<p>
+
+💰 ${item.price}
+
+</p>
+
+
+</div>
+
+`;
+
+
+}).join("");
+
+
+
+
+
+html = html.replaceAll(
+
+"{{TITLE}}",
+
+`Best ${category} Restaurants Kuala Lumpur | KL Food Guide`
+
+);
+
+
+
+html = html.replaceAll(
+
+"{{DESCRIPTION}}",
+
+`Discover the best ${category} restaurants in Kuala Lumpur with honest reviews, prices and must try dishes.`
+
+);
+
+
+
+html = html.replaceAll(
+
+"{{CATEGORY}}",
+
+category
+
+);
+
+
+
+html = html.replaceAll(
+
+"{{RESTAURANTS}}",
+
+restaurantList
+
+);
+
+
+
+fs.writeFileSync(
+
+`categories/${category}.html`,
+
+html
+
+);
+
+
+
+console.log(
+
+"Generated category:",
+
+category
+
+);
+
+
+});
