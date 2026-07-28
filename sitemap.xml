@@ -2,8 +2,6 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-
-
 <url>
 
 <loc>
@@ -21,23 +19,19 @@ weekly
 </url>
 
 
-
 <url>
 
 <loc>
 https://foodiemls.github.io/KL-FOOD-GUIDE/restaurants/gelulu-gelato.html
 </loc>
 
-
 <changefreq>
 monthly
 </changefreq>
 
-
 <priority>
 0.8
 </priority>
-
 
 </url>
 
@@ -49,16 +43,13 @@ monthly
 https://foodiemls.github.io/KL-FOOD-GUIDE/restaurants/xiao-by-nhx.html
 </loc>
 
-
 <changefreq>
 monthly
 </changefreq>
 
-
 <priority>
 0.8
 </priority>
-
 
 </url>
 
