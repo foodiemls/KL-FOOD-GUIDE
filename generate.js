@@ -16,7 +16,15 @@ fs.readFileSync(
 
 );
 
+const categories = [
 
+"dessert",
+"cafe",
+"japanese",
+"chinese",
+"western"
+
+];
 
 const template = fs.readFileSync(
 
@@ -342,7 +350,6 @@ weekly
 
 restaurants.forEach(function(item){
 
-
 sitemap += `
 
 <url>
@@ -364,9 +371,41 @@ monthly
 `;
 
 
-
 });
 
+// ==========================
+// Add category pages to sitemap
+// ==========================
+
+
+categories.forEach(function(category){
+
+
+sitemap += `
+
+<url>
+
+<loc>
+https://foodiemls.github.io/KL-FOOD-GUIDE/categories/${category}.html
+</loc>
+
+
+<changefreq>
+monthly
+</changefreq>
+
+
+<priority>
+0.7
+</priority>
+
+
+</url>
+
+`;
+
+
+});
 
 sitemap += `
 
@@ -374,20 +413,6 @@ sitemap += `
 
 `;
 
-
-
-fs.writeFileSync(
-
-"sitemap.xml",
-
-sitemap
-
-);
-
-
-console.log(
-"Sitemap generated"
-);
 
 // ==========================
 // Generate category pages
@@ -401,18 +426,6 @@ const categoryTemplate = fs.readFileSync(
 "utf8"
 
 );
-
-
-
-const categories = [
-
-"dessert",
-"cafe",
-"japanese",
-"chinese",
-"western"
-
-];
 
 
 
@@ -439,7 +452,6 @@ return item.category === category;
 
 
 });
-
 
 
 let restaurantList = filtered.map(function(item){
@@ -546,3 +558,16 @@ category
 
 
 });
+
+fs.writeFileSync(
+
+"sitemap.xml",
+
+sitemap
+
+);
+
+
+console.log(
+"Sitemap generated"
+);
