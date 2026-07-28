@@ -108,15 +108,19 @@ item.id
 );
 
 
-html = html.replaceAll(
-"{{RATING}}",
+let rating =
 (
 (
 item.ratings.food +
 item.ratings.value +
 item.ratings.environment
 ) / 3
-).toFixed(1)
+).toFixed(1);
+
+
+html = html.replaceAll(
+"{{RATING}}",
+rating
 );
 
 
