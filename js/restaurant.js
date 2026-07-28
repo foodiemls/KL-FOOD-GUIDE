@@ -157,24 +157,29 @@ ${item.price}
 </p>
 
 
-
-
-
-
 <h3>
-⭐ Rating
+⭐ Honest Rating
 </h3>
 
 
 <p>
 
-${item.rating}/10
+🍽 Food:
+${item.ratings.food}/10
+
+<br>
+
+
+💰 Value:
+${item.ratings.value}/10
+
+<br>
+
+
+🌿 Environment:
+${item.ratings.environment}/10
 
 </p>
-
-
-
-
 
 
 <h3>
