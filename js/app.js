@@ -176,7 +176,11 @@ onerror="this.style.display='none'"
 
 </p>
 
+<p>
 
+🍴 ${item.category}
+
+</p>
 
 <p>
 
