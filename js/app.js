@@ -188,8 +188,8 @@ onerror="this.style.display='none'"
 
 <p>
 
-⭐ Rating:
-${item.rating || "N/A"}/10
+⭐ Food:
+${item.ratings.food}/10
 
 </p>
 
