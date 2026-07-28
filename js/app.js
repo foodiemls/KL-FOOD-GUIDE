@@ -387,10 +387,7 @@ displayRestaurants(result);
 
 function openRestaurant(id){
 
-
 window.location.href =
-
-"restaurants/" + id + ".html";
-
+"/KL-FOOD-GUIDE/restaurants/" + id + ".html";
 
 }
