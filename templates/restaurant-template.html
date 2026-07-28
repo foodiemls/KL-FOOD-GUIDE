@@ -29,11 +29,28 @@ content="{{DESCRIPTION}}">
 
 "name":"{{NAME}}",
 
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+
+"@type":"Restaurant",
+
+"name":"{{NAME}}",
+
+"image":"https://foodiemls.github.io/KL-FOOD-GUIDE/images/{{IMAGE}}",
+
+"url":"https://foodiemls.github.io/KL-FOOD-GUIDE/restaurants/{{ID}}.html",
+
 "servesCuisine":"{{CATEGORY}}",
+
+"priceRange":"{{PRICE}}",
 
 "address":{
 
 "@type":"PostalAddress",
+
+"streetAddress":"{{ADDRESS}}",
 
 "addressLocality":"Kuala Lumpur",
 
@@ -41,7 +58,17 @@ content="{{DESCRIPTION}}">
 
 },
 
-"priceRange":"{{PRICE}}"
+"aggregateRating":{
+
+"@type":"AggregateRating",
+
+"ratingValue":"{{RATING}}",
+
+"bestRating":"10",
+
+"ratingCount":"1"
+
+}
 
 }
 
