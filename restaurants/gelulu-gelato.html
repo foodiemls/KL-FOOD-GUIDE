@@ -30,7 +30,11 @@ content="Discover GELULU GELATO in Kuala Lumpur. Find price, reviews, must try f
 "name":"GELULU GELATO",
 
 
-"image":"https://foodiemls.github.io/KL-FOOD-GUIDE/images/Gelulu2.jpeg",
+"image":[
+"https://foodiemls.github.io/KL-FOOD-GUIDE/images/Gelulu2.jpeg",
+"https://foodiemls.github.io/KL-FOOD-GUIDE/images/Gelulu4.jpeg",
+"https://foodiemls.github.io/KL-FOOD-GUIDE/images/Gelulu10.jpeg"
+],
 
 "url":"https://foodiemls.github.io/KL-FOOD-GUIDE/restaurants/gelulu-gelato.html",
 
@@ -130,15 +134,6 @@ padding:30px;
 }
 
 
-img{
-
-width:100%;
-
-border-radius:20px;
-
-}
-
-
 
 h1,h2{
 
@@ -177,6 +172,29 @@ cursor:pointer;
 
 }
 
+  .gallery{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+.gallery img{
+
+width:32%;
+
+height:200px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+  
 </style>
 
 
@@ -207,12 +225,26 @@ cursor:pointer;
 🍽 GELULU GELATO
 </h1>
 
+<div class="gallery">
+
 
 
 <img src="../images/Gelulu2.jpeg"
 alt="GELULU GELATO Kuala Lumpur">
 
 
+
+<img src="../images/Gelulu4.jpeg"
+alt="GELULU GELATO Kuala Lumpur">
+
+
+
+<img src="../images/Gelulu10.jpeg"
+alt="GELULU GELATO Kuala Lumpur">
+
+
+
+</div>
 
 <h2>
 📍 Location
