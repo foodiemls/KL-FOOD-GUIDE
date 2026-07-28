@@ -96,14 +96,26 @@ html = html.replaceAll(
 item.price
 );
 
+let images = item.images.map(function(img){
+
+return `
+
+<img src="../images/${img}"
+alt="${item.name} Kuala Lumpur">
+
+`;
+
+}).join("");
+
 
 
 html = html.replaceAll(
-"{{IMAGE}}",
-item.images[0]
+
+"{{IMAGES}}",
+
+images
+
 );
-
-
 
 html = html.replaceAll(
 "{{ADDRESS}}",
