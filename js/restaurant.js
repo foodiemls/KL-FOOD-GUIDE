@@ -60,7 +60,36 @@ displayRestaurant(restaurant);
 
 function displayRestaurant(item){
 
+document.getElementById("schema").innerHTML = `
 
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+
+"@type":"Restaurant",
+
+"name":"${item.name}",
+
+"servesCuisine":"${item.category}",
+
+"address":{
+
+"@type":"PostalAddress",
+
+"addressLocality":"Kuala Lumpur",
+
+"addressCountry":"Malaysia"
+
+},
+
+"priceRange":"${item.price}"
+
+}
+
+</script>
+
+`;
 
 // Change browser title for SEO
 
