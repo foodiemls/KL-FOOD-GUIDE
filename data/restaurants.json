@@ -1,0 +1,93 @@
+[
+{
+"id":"gelulu-gelato",
+
+"name":"Gelulu Gelato",
+
+"category":"dessert",
+
+"location":"Pasar Seni",
+
+"address":"Jalan Tun H S Lee, Kuala Lumpur",
+
+"price":"RM10-20",
+
+"priceCategory":"under20",
+
+"rating":7,
+
+"images":[
+"Gelulu2.jpeg",
+"Gelulu4.jpeg",
+"Gelulu10.jpeg"
+],
+
+"tags":[
+"Dessert",
+"Chill Place",
+"Near LRT"
+],
+
+"mustTry":[
+"Pistachio Gelato",
+"Peanut Butter Gelato"
+],
+
+"hours":
+"Daily 12PM - 10:30PM",
+
+"review":
+"The gelato is not overly sweet and has unique flavours that do not taste artificial.",
+
+"suitable":
+"Friends gathering, couples dessert dates and casual chilling."
+
+},
+
+
+{
+"id":"xiao-by-nhx",
+
+"name":"XIAO BY NHX",
+
+"category":"dessert",
+
+"location":"Petaling Street",
+
+"address":"Jalan Petaling, Kuala Lumpur",
+
+"price":"RM10-20",
+
+"priceCategory":"under20",
+
+"rating":8,
+
+"images":[
+"xiao1.jpeg",
+"xiao2.jpeg",
+"xiao3.jpeg"
+],
+
+"tags":[
+"Dessert",
+"Convenient Location",
+"Near LRT"
+],
+
+"mustTry":[
+"Mango Pomelo Nectar",
+"Taro Mochi Cloud Milk"
+],
+
+"hours":
+"Daily 12PM - 10PM",
+
+"review":
+"The desserts are not overly sweet with layered textures and authentic ingredients.",
+
+"suitable":
+"Quick dessert stop after exploring Pasar Seni and Petaling Street."
+
+}
+
+]
