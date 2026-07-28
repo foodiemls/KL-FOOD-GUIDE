@@ -103,6 +103,11 @@ item.address
 );
 
 html = html.replaceAll(
+"{{GOOGLEMAPS}}",
+item.googleMaps
+);
+  
+html = html.replaceAll(
 "{{ID}}",
 item.id
 );
