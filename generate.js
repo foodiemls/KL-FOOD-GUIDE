@@ -96,6 +96,21 @@ html = html.replaceAll(
 item.price
 );
 
+  html = html.replaceAll(
+"{{IMAGE1}}",
+item.images[0]
+);
+
+html = html.replaceAll(
+"{{IMAGE2}}",
+item.images[1]
+);
+
+html = html.replaceAll(
+"{{IMAGE3}}",
+item.images[2]
+);
+  
 let images = item.images.map(function(img){
 
 return `
