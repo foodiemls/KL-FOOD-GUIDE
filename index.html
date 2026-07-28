@@ -1,59 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
+
 <meta charset="UTF-8">
 
+
 <title>
-KL Food Guide | Best Restaurants, Cafes, Desserts & Hidden Gems in Kuala Lumpur
+KL Food Guide | Best Restaurants, Cafes, Desserts & Hidden Gems Kuala Lumpur
 </title>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<meta name="description" content="
-Discover the best restaurants, cafes, desserts and hidden food gems around Kuala Lumpur.
-Find food recommendations by category, location and budget.
-">
+<meta name="description"
+content="Discover the best restaurants, cafes, desserts and hidden food gems around Kuala Lumpur.">
 
 
-<meta name="keywords" content="
-KL food guide,
-Kuala Lumpur restaurants,
-best cafe KL,
-dessert KL,
-Japanese restaurant KL,
-Chinese restaurant KL,
-food recommendation Malaysia
-">
-
-
-<meta name="author" content="KL Food Guide">
-
-
-<!-- Open Graph (WhatsApp / Facebook Preview) -->
-
-<meta property="og:title"
-content="KL Food Guide | Best Food Spots in Kuala Lumpur">
-
-
-<meta property="og:description"
-content="Discover hidden gems, restaurants, cafes, desserts and local favourites around KL.">
-
-
-<meta property="og:type"
-content="website">
-
-
-<meta property="og:image"
-content="images/Gelulu2.jpeg">
-
-
-<meta property="og:url"
-content="https://foodiemls.github.io/KL-FOOD-GUIDE/">
-
+<meta name="keywords"
+content="KL food guide, Kuala Lumpur restaurants, cafe KL, dessert KL, Japanese restaurant KL">
 
 
 <!-- Google Analytics -->
@@ -71,7 +39,7 @@ dataLayer.push(arguments);
 
 gtag('js', new Date());
 
-gtag('config', 'G-6FDWFKS5JL');
+gtag('config','G-6FDWFKS5JL');
 
 </script>
 
@@ -80,21 +48,17 @@ gtag('config', 'G-6FDWFKS5JL');
 <style>
 
 
-* {
-
+*{
 box-sizing:border-box;
-
 }
 
 
 
-body {
-
-font-family:
-Arial,
-sans-serif;
+body{
 
 margin:0;
+
+font-family:Arial,sans-serif;
 
 background:#faf7f2;
 
@@ -104,10 +68,8 @@ color:#333;
 
 
 
-/* Header */
 
-
-header {
+header{
 
 background:white;
 
@@ -115,50 +77,41 @@ padding:35px 20px;
 
 text-align:center;
 
-box-shadow:
-0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 10px #ddd;
 
 }
 
 
 
-header h1 {
-
-margin:0;
-
-font-size:36px;
+header h1{
 
 color:#5b3a29;
 
+font-size:36px;
+
 }
 
 
 
-header p {
+header p{
 
 color:#777;
 
-font-size:16px;
-
 }
 
 
 
-/* Search */
-
-
-.search {
-
-margin:25px auto 0;
+.search{
 
 max-width:500px;
 
+margin:auto;
+
 }
 
 
 
-.search input {
-
+.search input{
 
 width:100%;
 
@@ -168,32 +121,15 @@ border-radius:30px;
 
 border:none;
 
-box-shadow:
-0 3px 12px #ddd;
+box-shadow:0 3px 10px #ddd;
 
 font-size:16px;
 
-
 }
 
 
 
-/* Category */
-
-
-.filter-title {
-
-text-align:center;
-
-margin-top:25px;
-
-color:#555;
-
-}
-
-
-
-.categories {
+.categories{
 
 
 display:flex;
@@ -204,67 +140,55 @@ gap:10px;
 
 flex-wrap:wrap;
 
-margin:15px 20px;
+margin:25px;
 
 
 }
 
 
 
-.category {
+.category{
 
 
 background:white;
+
+border:none;
 
 padding:10px 16px;
 
 border-radius:25px;
 
-border:none;
-
-box-shadow:
-0 3px 10px #ddd;
-
 cursor:pointer;
 
-font-size:14px;
-
+box-shadow:0 3px 10px #ddd;
 
 }
 
 
 
-.category:hover {
-
+.category:hover{
 
 background:#fff0d9;
 
-
 }
 
 
 
-/* Restaurant Container */
-
-
-.container {
+.container{
 
 
 width:90%;
 
-max-width:650px;
+max-width:700px;
 
 margin:auto;
-
 
 }
 
 
 
-/* Restaurant Card */
 
-
-.card {
+.card{
 
 
 background:white;
@@ -273,176 +197,96 @@ border-radius:20px;
 
 overflow:hidden;
 
-margin:40px 0;
+margin:35px 0;
 
-box-shadow:
-0 5px 20px rgba(0,0,0,0.08);
-
+box-shadow:0 5px 20px #ddd;
 
 }
 
 
 
-/* Image Gallery */
+
+.card img{
 
 
-.gallery {
+width:100%;
 
-
-display:flex;
-
-overflow-x:auto;
-
-gap:12px;
-
-padding:15px;
-
-
-}
-
-
-
-.gallery img {
-
-
-width:260px;
-
-height:260px;
+height:280px;
 
 object-fit:cover;
 
-border-radius:15px;
-
-flex-shrink:0;
-
-
 }
 
 
 
-/* Content */
-
-
-.content {
+.content{
 
 
 padding:25px;
 
-
 }
 
 
 
-.content h2 {
-
+.content h2{
 
 color:#5b3a29;
 
-
 }
 
 
 
-.info {
-
-
-line-height:1.8;
-
-color:#666;
-
-
-}
-
-
-
-.tag {
+.tag{
 
 
 display:inline-block;
 
 background:#fff0d9;
 
-padding:7px 12px;
+padding:6px 12px;
 
 border-radius:20px;
 
-margin:8px 3px;
+margin:5px;
 
 font-size:13px;
 
+}
+
+
+
+button.view{
+
+
+background:#5b3a29;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
 
 }
 
 
 
-.score {
 
-
-line-height:1.9;
-
-
-}
-
-
-
-.review {
-
-
-background:#faf7f2;
-
-padding:15px;
-
-border-radius:15px;
-
-
-}
-
-
-
-/* Footer */
-
-
-footer {
+footer{
 
 
 text-align:center;
 
 padding:30px;
 
-color:#888;
-
-background:white;
-
-margin-top:40px;
-
+color:#777;
 
 }
 
 
-
-/* Mobile */
-
-
-@media(max-width:600px){
-
-
-header h1 {
-
-font-size:28px;
-
-}
-
-
-.gallery img {
-
-width:220px;
-
-height:220px;
-
-}
-
-
-}
 
 </style>
 
@@ -450,418 +294,109 @@ height:220px;
 </head>
 
 
+
 <body>
 
-<div class="container">
 
 
-<!-- GELULU GELATO -->
+<header>
 
 
-<div class="card"
-
-data-category="dessert"
-
-data-price="under20"
-
-data-name="gelulu gelato dessert pasarseni jalan tun h s lee kuala lumpur">
-
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-
-"@type":"Restaurant",
-
-"name":"Gelulu Gelato",
-
-"address":{
-"@type":"PostalAddress",
-"streetAddress":"Jalan Tun H S Lee",
-"addressLocality":"Kuala Lumpur",
-"addressCountry":"Malaysia"
-},
-
-"servesCuisine":"Dessert",
-
-"priceRange":"RM10-20",
-
-"aggregateRating":{
-"@type":"AggregateRating",
-"ratingValue":"7",
-"bestRating":"10"
-}
-
-}
-
-</script>
-
-
-
-<div class="gallery">
-
-
-<img 
-loading="lazy"
-src="images/Gelulu2.jpeg"
-alt="Gelulu Gelato Pasar Seni Kuala Lumpur dessert">
-
-
-<img 
-loading="lazy"
-src="images/Gelulu4.jpeg"
-alt="Gelulu Gelato Kuala Lumpur interior">
-
-
-<img 
-loading="lazy"
-src="images/Gelulu10.jpeg"
-alt="Gelulu Gelato ice cream flavours">
-
-
-<img 
-loading="lazy"
-src="images/Gelulu3.jpeg"
-alt="Gelulu Gelato dessert shop KL">
-
-
-</div>
-
-
-
-<div class="content">
-
-
-<h2>
-🍨 Gelulu Gelato - Dessert Shop Near Pasar Seni KL
-</h2>
-
-
-
-<div class="info">
-
-
-📍 Jalan Tun H S Lee, Pasar Seni Kuala Lumpur
-
-<br>
-
-
-💰 RM10-20/person
-
-<br>
-
-
-🍨 Dessert & Gelato
-
-<br>
-
-
-🚆 5 minutes walk from LRT station
-
-
-</div>
-
-
-
-<div class="tag">
-🍦 Dessert
-</div>
-
-
-<div class="tag">
-❤️ Chill Place
-</div>
-
-
-<div class="tag">
-📍 Pasar Seni
-</div>
-
-
-
-<h3>
-⭐ Honest Review
-</h3>
-
-
-
-<div class="score">
-
-
-🍽 Food: 7/10
-
-<br>
-
-
-💰 Value: 6/10
-
-<br>
-
-
-🌿 Environment: 7/10
-
-
-</div>
-
-
-
-<h3>
-🍦 Must Try Gelato
-</h3>
-
-
-<ul>
-
-<li>Pistachio Gelato</li>
-
-<li>Peanut Butter Gelato</li>
-
-</ul>
-
-
-
-<div class="review">
+<h1>
+🍜 KL Food Guide
+</h1>
 
 
 <p>
-The gelato is not overly sweet and has unique flavours that do not taste artificial.
-</p>
-
-
-<p>
-The environment is cosy with air-conditioning and relaxing music.
-</p>
-
-
-</div>
-
-
-
-<h3>
-👥 Suitable For
-</h3>
-
-
-<p>
-Friends gathering, couples dessert dates and casual chilling.
+Discover hidden gems and local favourites around Kuala Lumpur.
 </p>
 
 
 
-<h3>
-🕒 Opening Hours
+<div class="search">
+
+<input
+
+id="searchInput"
+
+placeholder="Search restaurant, location or food..."
+
+onkeyup="searchFood()"
+
+>
+
+</div>
+
+
+</header>
+
+
+
+
+<h3 style="text-align:center">
+
+🍴 Category
+
 </h3>
 
 
-<p>
+<div class="categories">
 
-Daily:
-12PM - 10:30PM
 
-<br>
+<button class="category"
+onclick="filterFood('all')">
 
-Friday & Saturday:
-12PM - 1AM
+All
 
-</p>
+</button>
 
 
 
-<h3>
-🔄 Would I Come Back?
-</h3>
-
-
-<p>
-
-✅ Yes. They regularly update flavours with special seasonal options.
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- XIAO BY NHX -->
-
-
-<div class="card"
-
-
-data-category="dessert"
-
-
-data-price="under20"
-
-
-data-name="xiao by nhx dessert petaling street pasar seni kuala lumpur">
-
-
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-
-"@type":"Restaurant",
-
-"name":"XIAO BY NHX",
-
-"address":{
-"@type":"PostalAddress",
-"streetAddress":"Jalan Petaling",
-"addressLocality":"Kuala Lumpur",
-"addressCountry":"Malaysia"
-},
-
-"servesCuisine":"Dessert",
-
-"priceRange":"RM10-20"
-
-}
-
-</script>
-
-
-
-
-<div class="gallery">
-
-
-
-<img
-
-loading="lazy"
-
-src="images/xiao1.jpeg"
-
-alt="XIAO BY NHX dessert shop Petaling Street Kuala Lumpur">
-
-
-
-<img
-
-loading="lazy"
-
-src="images/xiao2.jpeg"
-
-alt="XIAO BY NHX mango dessert Kuala Lumpur">
-
-
-
-<img
-
-loading="lazy"
-
-src="images/xiao3.jpeg"
-
-alt="XIAO BY NHX dessert menu KL">
-
-
-
-<img
-
-loading="lazy"
-
-src="images/xiao4.jpeg"
-
-alt="XIAO BY NHX interior">
-
-
-
-
-</div>
-
-
-
-
-
-<div class="content">
-
-
-
-<h2>
-
-🥭 XIAO BY NHX - Dessert Shop Near Petaling Street KL
-
-</h2>
-
-
-
-
-<div class="info">
-
-
-📍 Jalan Petaling, Pasar Seni Kuala Lumpur
-
-<br>
-
-
-💰 RM10-20/person
-
-<br>
-
+<button class="category"
+onclick="filterFood('dessert')">
 
 🍨 Dessert
 
-<br>
-
-
-🚆 Outside Pasar Seni LRT Station
-
-
-</div>
+</button>
 
 
 
-<div class="tag">
-🥭 Dessert
-</div>
+<button class="category"
+onclick="filterFood('cafe')">
 
+☕
 
-<div class="tag">
-🚆 Convenient Location
-</div>
+Cafe
 
-
-
-<div class="tag">
-📍 Petaling Street
-</div>
+</button>
 
 
 
+<button class="category"
+onclick="filterFood('japanese')">
 
-<h3>
-⭐ Honest Review
-</h3>
+🍣 Japanese
 
-
-
-<div class="score">
+</button>
 
 
-🍽 Food: 8/10
 
-<br>
+<button class="category"
+onclick="filterFood('chinese')">
+
+🥢 Chinese
+
+</button>
 
 
-💰 Value: 6/10
 
-<br>
+<button class="category"
+onclick="filterFood('western')">
 
+🍔 Western
 
-🌿 Environment: 6/10
+</button>
+
 
 
 </div>
@@ -869,37 +404,10 @@ alt="XIAO BY NHX interior">
 
 
 
-<h3>
-🍮 Must Try Dessert
-</h3>
 
+<div class="container"
 
-
-<ul>
-
-<li>Mango Pomelo Nectar</li>
-
-<li>Taro Mochi Cloud Milk</li>
-
-</ul>
-
-
-
-<div class="review">
-
-
-<p>
-
-Desserts are not overly sweet with layered textures and authentic ingredients.
-
-</p>
-
-
-<p>
-
-The shop is air-conditioned but seating is limited, suitable for takeaway or a short rest.
-
-</p>
+id="restaurantList">
 
 
 </div>
@@ -907,61 +415,10 @@ The shop is air-conditioned but seating is limited, suitable for takeaway or a s
 
 
 
-<h3>
-👥 Suitable For
-</h3>
 
-
-<p>
-
-A quick dessert stop after exploring Pasar Seni and Petaling Street.
-
-</p>
-
-
-
-
-<h3>
-🕒 Opening Hours
-</h3>
-
-
-<p>
-
-Daily:
-12PM - 10PM
-
-</p>
-
-
-
-
-<h3>
-🔄 Would I Come Back?
-</h3>
-
-
-
-<p>
-
-✅ Yes. Good location and interesting dessert choices.
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-<!-- FOOTER -->
 
 <footer>
+
 
 <h3>
 🍜 KL Food Guide
@@ -969,25 +426,12 @@ Daily:
 
 
 <p>
-Discover the best restaurants, cafes, desserts and hidden food gems around Kuala Lumpur.
+Best restaurants, cafes and desserts around Kuala Lumpur.
 </p>
 
 
 <p>
-Categories:
-Chinese |
-Japanese |
-Western |
-Cafe |
-Dessert |
-Cake |
-Buffet |
-Fine Dining
-</p>
-
-
-<p>
-KL Food Guide © 2026
+© 2026 KL Food Guide
 </p>
 
 
@@ -996,222 +440,7 @@ KL Food Guide © 2026
 
 
 
-
-<script>
-
-
-// =============================
-// FILTER SYSTEM
-// =============================
-
-
-let selectedCategory = "all";
-
-let selectedPrice = "all";
-
-
-
-function filterFood(type){
-
-
-
-let categories = [
-"chinese",
-"japanese",
-"western",
-"cafe",
-"dessert",
-"cake",
-"buffet",
-"fine-dine"
-];
-
-
-
-let prices = [
-"under20",
-"mid",
-"premium"
-];
-
-
-
-if(categories.includes(type))
-
-{
-
-selectedCategory = type;
-
-}
-
-
-else if(prices.includes(type))
-
-{
-
-selectedPrice = type;
-
-}
-
-
-else
-
-{
-
-selectedCategory = "all";
-
-selectedPrice = "all";
-
-}
-
-
-
-applyFilter();
-
-
-
-}
-
-
-
-
-
-function applyFilter(){
-
-
-
-let cards = document.querySelectorAll(".card");
-
-
-
-cards.forEach(function(card){
-
-
-
-let category =
-card.getAttribute("data-category");
-
-
-let price =
-card.getAttribute("data-price");
-
-
-
-let categoryMatch =
-selectedCategory === "all"
-||
-category === selectedCategory;
-
-
-
-let priceMatch =
-selectedPrice === "all"
-||
-price === selectedPrice;
-
-
-
-if(
-categoryMatch &&
-priceMatch
-)
-
-{
-
-card.style.display="block";
-
-}
-
-else
-
-{
-
-card.style.display="none";
-
-}
-
-
-
-});
-
-
-}
-
-
-
-
-
-// =============================
-// SEARCH SYSTEM
-// =============================
-
-
-function searchFood(){
-
-
-
-let input =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase();
-
-
-
-let cards =
-document.querySelectorAll(".card");
-
-
-
-cards.forEach(function(card){
-
-
-
-let name =
-card
-.getAttribute("data-name")
-.toLowerCase();
-
-
-
-let content =
-card
-.innerText
-.toLowerCase();
-
-
-
-if(
-name.includes(input)
-||
-content.includes(input)
-)
-
-{
-
-card.style.display="block";
-
-}
-
-else
-
-{
-
-card.style.display="none";
-
-}
-
-
-
-});
-
-
-}
-
-
-
-</script>
-
+<script src="js/app.js"></script>
 
 
 </body>
