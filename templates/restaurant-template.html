@@ -177,6 +177,29 @@ cursor:pointer;
 
 }
 
+  .gallery{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+.gallery img{
+
+width:32%;
+
+height:200px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+  
 </style>
 
 
@@ -207,12 +230,11 @@ cursor:pointer;
 🍽 {{NAME}}
 </h1>
 
+<div class="gallery">
 
+{{IMAGES}}
 
-<img src="../images/{{IMAGE}}"
-alt="{{NAME}} Kuala Lumpur">
-
-
+</div>
 
 <h2>
 📍 Location
