@@ -102,7 +102,22 @@ html = html.replaceAll(
 item.address
 );
 
+html = html.replaceAll(
+"{{ID}}",
+item.id
+);
 
+
+html = html.replaceAll(
+"{{RATING}}",
+(
+(
+item.ratings.food +
+item.ratings.value +
+item.ratings.environment
+) / 3
+).toFixed(1)
+);
 
 
 
