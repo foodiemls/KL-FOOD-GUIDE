@@ -388,11 +388,9 @@ displayRestaurants(result);
 function openRestaurant(id){
 
 
-
 window.location.href =
 
-"restaurant.html?id=" + id;
-
+"restaurants/" + id + ".html";
 
 
 }
