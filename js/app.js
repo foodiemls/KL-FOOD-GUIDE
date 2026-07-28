@@ -30,13 +30,16 @@ fetch("./data/restaurants.json")
 .then(function(data){
 
 
-    console.log("Restaurant data loaded:", data);
+console.log("Restaurant data loaded:", data);
 
 
-    restaurants = data;
+restaurants = data;
 
 
-    displayRestaurants(restaurants);
+displayRestaurants(restaurants);
+
+
+updateCategoryCount();
 
 
 })
@@ -110,9 +113,6 @@ return;
 }
 
 
-
-
-
 data.forEach(function(item){
 
 
@@ -140,9 +140,6 @@ let card = document.createElement("div");
 
 card.className="card";
 
-
-
-
 card.innerHTML = `
 
 
@@ -168,8 +165,6 @@ onerror="this.style.display='none'"
 
 </h2>
 
-
-
 <p>
 
 📍 ${item.location || item.address}
@@ -187,8 +182,6 @@ onerror="this.style.display='none'"
 💰 ${item.price}
 
 </p>
-
-
 
 <p>
 
@@ -222,9 +215,6 @@ ${item.ratings.environment}/10
 </p>
 
 
-
-
-
 <div>
 
 
@@ -249,9 +239,6 @@ ${tag}
 
 
 </div>
-
-
-
 
 <br>
 
@@ -289,19 +276,12 @@ container.appendChild(card);
 }
 
 
-
-
-
-
-
 // ==========================
 // SEARCH
 // ==========================
 
 
-
 function searchFood(){
-
 
 
 let keyword =
@@ -313,9 +293,6 @@ document
 .value
 
 .toLowerCase();
-
-
-
 
 
 let result = restaurants.filter(function(item){
@@ -356,11 +333,6 @@ displayRestaurants(result);
 }
 
 
-
-
-
-
-
 // ==========================
 // CATEGORY FILTER
 // ==========================
@@ -369,49 +341,78 @@ displayRestaurants(result);
 
 function filterFood(category){
 
-
-
 if(category==="all"){
 
 
 displayRestaurants(restaurants);
 
-
 return;
 
-
 }
-
-
-
 
 let result = restaurants.filter(function(item){
 
 
 return item.category === category;
 
-
 });
-
-
 
 displayRestaurants(result);
 
+}
 
+function updateCategoryCount(){
+
+
+let buttons = document.querySelectorAll(".category");
+
+
+buttons.forEach(function(button){
+
+
+let category =
+button.getAttribute("onclick")
+.match(/'([^']+)'/)[1];
+
+
+
+if(category === "all"){
+
+button.innerHTML =
+"All (" + restaurants.length + ")";
+
+return;
 
 }
 
 
 
+let count =
+restaurants.filter(function(item){
+
+return item.category === category;
+
+}).length;
 
 
 
+let text =
+button.innerText.replace(/\s*\(\d+\)/,"");
+
+
+
+button.innerHTML =
+text + " (" + count + ")";
+
+
+});
+
+
+}
 
 // ==========================
 // DETAIL PAGE
 // ==========================
-
-
 
 function openRestaurant(id){
 
