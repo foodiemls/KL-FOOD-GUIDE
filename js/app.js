@@ -188,8 +188,32 @@ onerror="this.style.display='none'"
 
 <p>
 
-⭐ Food:
+⭐ Overall:
+${(
+(
+item.ratings.food +
+item.ratings.value +
+item.ratings.environment
+)/3
+).toFixed(1)}/10
+
+</p>
+
+
+<p>
+
+🍽 Food:
 ${item.ratings.food}/10
+
+<br>
+
+💰 Value:
+${item.ratings.value}/10
+
+<br>
+
+🌿 Environment:
+${item.ratings.environment}/10
 
 </p>
 
