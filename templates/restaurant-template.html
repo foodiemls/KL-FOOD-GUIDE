@@ -192,7 +192,30 @@ border-radius:15px;
 
 }
 
+.lightbox{
 
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+align-items:center;
+justify-content:center;
+
+}
+
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+
+}
+  
 .gallery::-webkit-scrollbar{
 
 height:8px;
@@ -235,6 +258,12 @@ height:8px;
 
 </div>
 
+<div class="lightbox" id="lightbox">
+
+<img id="lightbox-img">
+
+</div>
+  
 <h2>
 📍 Location
 </h2>
@@ -373,7 +402,37 @@ height:8px;
 
 </div>
 
+<script>
 
+let images = document.querySelectorAll(".gallery img");
+
+let lightbox = document.getElementById("lightbox");
+
+let lightboxImg = document.getElementById("lightbox-img");
+
+
+images.forEach(function(img){
+
+img.onclick=function(){
+
+lightbox.style.display="flex";
+
+lightboxImg.src=this.src;
+
+}
+
+});
+
+
+lightbox.onclick=function(){
+
+lightbox.style.display="none";
+
+}
+
+
+</script>
+  
 </body>
 
 
