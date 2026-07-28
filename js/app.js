@@ -1,28 +1,70 @@
 let restaurants = [];
 
-let currentCategory = "all";
+
+// ==========================
+// LOAD RESTAURANT DATA
+// ==========================
 
 
-// =====================
-// LOAD DATA
-// =====================
+fetch("./data/restaurants.json")
 
 
-fetch("data/restaurants.json")
+.then(function(response){
 
-.then(response => response.json())
 
-.then(data => {
+    if(!response.ok){
 
-restaurants = data;
+        throw new Error(
+            "Cannot load restaurants.json"
+        );
 
-displayRestaurants(restaurants);
+    }
+
+
+    return response.json();
+
 
 })
 
-.catch(error => {
 
-console.log("Error loading restaurant data:", error);
+.then(function(data){
+
+
+    console.log("Restaurant data loaded:", data);
+
+
+    restaurants = data;
+
+
+    displayRestaurants(restaurants);
+
+
+})
+
+
+.catch(function(error){
+
+
+    console.error(
+        "Loading error:",
+        error
+    );
+
+
+    document.getElementById(
+        "restaurantList"
+    ).innerHTML = `
+
+    <h2>
+    Unable to load restaurant data
+    </h2>
+
+    <p>
+    Check data/restaurants.json path
+    </p>
+
+    `;
+
 
 });
 
@@ -30,16 +72,20 @@ console.log("Error loading restaurant data:", error);
 
 
 
-// =====================
-// DISPLAY RESTAURANTS
-// =====================
+
+
+// ==========================
+// DISPLAY CARD
+// ==========================
 
 
 function displayRestaurants(data){
 
 
 let container =
-document.getElementById("restaurantList");
+document.getElementById(
+    "restaurantList"
+);
 
 
 
@@ -47,7 +93,45 @@ container.innerHTML="";
 
 
 
+if(data.length===0){
+
+
+container.innerHTML = `
+
+<h2>
+No restaurant found
+</h2>
+
+`;
+
+return;
+
+
+}
+
+
+
+
+
 data.forEach(function(item){
+
+
+
+let image = 
+item.images && item.images.length > 0
+
+?
+item.images[0]
+
+:
+"";
+
+
+
+let tags =
+
+item.tags || [];
+
 
 
 
@@ -58,23 +142,21 @@ card.className="card";
 
 
 
-card.setAttribute(
-"data-category",
-item.category
-);
-
-
-
-
 
 card.innerHTML = `
 
 
-<img 
+<img
 
-src="images/${item.images[0]}"
+src="images/${image}"
 
-alt="${item.name} Kuala Lumpur food">
+alt="${item.name} Kuala Lumpur food"
+
+
+onerror="this.style.display='none'"
+
+>
+
 
 
 <div class="content">
@@ -82,7 +164,7 @@ alt="${item.name} Kuala Lumpur food">
 
 <h2>
 
-${item.name}
+🍽 ${item.name}
 
 </h2>
 
@@ -90,7 +172,7 @@ ${item.name}
 
 <p>
 
-📍 ${item.location}
+📍 ${item.location || item.address}
 
 </p>
 
@@ -106,9 +188,11 @@ ${item.name}
 
 <p>
 
-⭐ Rating: ${item.rating}/10
+⭐ Rating:
+${item.rating || "N/A"}/10
 
 </p>
+
 
 
 
@@ -116,9 +200,12 @@ ${item.name}
 <div>
 
 
-${item.tags.map(tag =>
+${
 
-`
+tags.map(function(tag){
+
+return `
+
 <span class="tag">
 
 ${tag}
@@ -127,7 +214,10 @@ ${tag}
 
 `
 
-).join("")}
+}).join("")
+
+
+}
 
 
 </div>
@@ -136,7 +226,6 @@ ${tag}
 
 
 <br>
-
 
 
 <button
@@ -168,6 +257,7 @@ container.appendChild(card);
 });
 
 
+
 }
 
 
@@ -176,12 +266,14 @@ container.appendChild(card);
 
 
 
-// =====================
+// ==========================
 // SEARCH
-// =====================
+// ==========================
+
 
 
 function searchFood(){
+
 
 
 let keyword =
@@ -196,32 +288,32 @@ document
 
 
 
+
+
 let result = restaurants.filter(function(item){
 
 
 
-return (
+let text = `
 
-item.name.toLowerCase()
-.includes(keyword)
+${item.name}
 
-||
+${item.location}
 
-item.location.toLowerCase()
-.includes(keyword)
+${item.address}
 
-||
+${item.category}
 
-item.category.toLowerCase()
-.includes(keyword)
+${item.tags}
 
-||
+`
 
-item.tags.join(" ")
-.toLowerCase()
-.includes(keyword)
+.toLowerCase();
 
-);
+
+
+
+return text.includes(keyword);
 
 
 
@@ -240,17 +332,14 @@ displayRestaurants(result);
 
 
 
-// =====================
+
+// ==========================
 // CATEGORY FILTER
-// =====================
+// ==========================
 
 
 
 function filterFood(category){
-
-
-
-currentCategory = category;
 
 
 
@@ -271,9 +360,7 @@ return;
 let result = restaurants.filter(function(item){
 
 
-
 return item.category === category;
-
 
 
 });
@@ -290,9 +377,12 @@ displayRestaurants(result);
 
 
 
-// =====================
-// OPEN DETAIL PAGE
-// =====================
+
+
+// ==========================
+// DETAIL PAGE
+// ==========================
+
 
 
 function openRestaurant(id){
