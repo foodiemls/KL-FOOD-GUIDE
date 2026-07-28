@@ -251,11 +251,36 @@ item.hours
 
 );
 
+let related = restaurants
+.filter(function(r){
+
+return r.category === item.category
+&& r.id !== item.id;
+
+})
+.slice(0,3)
+.map(function(r){
+
+return `
+<li>
+<a href="${r.id}.html">
+${r.name}
+</a>
+</li>
+`;
+
+})
+.join("");
 
 
 
+html = html.replaceAll(
 
+"{{RELATED}}",
 
+related
+
+);
 
 // Save file
 
