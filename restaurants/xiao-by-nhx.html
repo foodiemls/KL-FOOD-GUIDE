@@ -120,7 +120,135 @@ color:#333;
 
 }
 
+.map-button{
 
+display:inline-block;
+
+background:#5b3a29;
+
+color:white;
+
+padding:10px 18px;
+
+border-radius:25px;
+
+margin:5px 0 20px;
+
+}
+
+.headline{
+
+font-size:20px;
+
+font-weight:600;
+
+color:#5b3a29;
+
+margin:10px 0 15px;
+
+line-height:1.4;
+
+}
+
+
+.meta{
+
+display:flex;
+
+gap:8px;
+
+color:#777;
+
+font-size:15px;
+
+margin-bottom:8px;
+
+}
+
+
+.location{
+
+color:#777;
+
+font-size:15px;
+
+margin-bottom:20px;
+
+}
+
+
+.review{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#444;
+
+}
+
+
+.ratings{
+
+margin-top:15px;
+
+}
+
+
+.rating{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:14px 0;
+
+border-bottom:1px solid #eee;
+
+}
+
+
+.rating span{
+
+font-weight:500;
+
+}
+
+
+.rating strong{
+
+color:#5b3a29;
+
+}
+
+
+.best-for{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:8px;
+
+margin-top:10px;
+
+}
+
+
+.best-tag{
+
+background:#fff0d9;
+
+color:#5b3a29;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-size:14px;
+
+}
+  
 .container{
 
 max-width:700px;
@@ -185,13 +313,31 @@ padding-bottom:10px;
 .gallery img{
 
 flex:0 0 auto;
-width:220px;
-height:200px;
+
+width:280px;
+
+height:210px;
+
 object-fit:cover;
+
 border-radius:15px;
+
+cursor:pointer;
 
 }
 
+@media(max-width:600px){
+
+.gallery img{
+
+width:240px;
+
+height:200px;
+
+}
+
+}
+  
 .lightbox{
 
 display:none;
@@ -249,8 +395,26 @@ height:8px;
 
 
 <h1>
-🍽 XIAO BY NHX
+XIAO BY NHX
 </h1>
+
+<p class="headline">
+undefined
+</p>
+
+<div class="meta">
+
+<span>dessert</span>
+
+<span>•</span>
+
+<span>RM10-20</span>
+
+</div>
+
+<div class="location">
+📍 Jalan Petaling, Kuala Lumpur
+</div>
 
 <div class="gallery">
 
@@ -289,12 +453,10 @@ Jalan Petaling, Kuala Lumpur
 
 <p>
 
-<a href="https://share.google/CxSJWPDoCNKUltcCM" target="_blank">
-
+<a class="map-button" href="https://share.google/CxSJWPDoCNKUltcCM" target="_blank">
 🗺 Open in Google Maps
-
 </a>
-
+  
 </p>
 
 
@@ -310,23 +472,40 @@ RM10-20
 
 
 <h2>
-⭐ Honest Rating
+⭐ My Ratings
 </h2>
 
 <p>
 
-🍽 Food:
-8/10
+<div class="ratings">
 
-<br>
+<div class="rating">
 
-💰 Value:
-6/10
+<span>Food</span>
 
-<br>
+<strong>8/10</strong>
 
-🌿 Environment:
-6/10
+</div>
+
+
+<div class="rating">
+
+<span>Value</span>
+
+<strong>6/10</strong>
+
+</div>
+
+
+<div class="rating">
+
+<span>Ambience</span>
+
+<strong>6/10</strong>
+
+</div>
+
+</div>
 
 </p>
 
@@ -374,7 +553,7 @@ Near LRT
 
 
 <h2>
-🍴 Must Try
+🍨 Must Try
 </h2>
 
 
@@ -397,11 +576,10 @@ Near LRT
 
 
 <h2>
-⭐ Honest Review
+✨ My Take
 </h2>
 
-
-<p>
+<p class="review">
 
 The desserts are not overly sweet with layered textures and authentic ingredients.
 
@@ -412,15 +590,20 @@ The desserts are not overly sweet with layered textures and authentic ingredient
 
 
 <h2>
-👥 Suitable For
+💡 Best For
 </h2>
 
+<div class="best-for">
 
-<p>
 
+
+<span class="best-tag">
 Quick dessert stop after exploring Pasar Seni and Petaling Street.
+</span>
 
-</p>
+
+
+</div>
 
 
 
