@@ -249,8 +249,26 @@ height:8px;
 
 
 <h1>
-🍽 {{NAME}}
+{{NAME}}
 </h1>
+
+<p class="headline">
+{{HEADLINE}}
+</p>
+
+<div class="meta">
+
+<span>{{CATEGORY}}</span>
+
+<span>•</span>
+
+<span>{{PRICE}}</span>
+
+</div>
+
+<div class="location">
+📍 {{ADDRESS}}
+</div>
 
 <div class="gallery">
 
@@ -295,23 +313,40 @@ height:8px;
 
 
 <h2>
-⭐ Honest Rating
+⭐ My Ratings
 </h2>
 
 <p>
 
-🍽 Food:
-{{FOOD}}/10
+<div class="ratings">
 
-<br>
+<div class="rating">
 
-💰 Value:
-{{VALUE}}/10
+<span>Food</span>
 
-<br>
+<strong>{{FOOD}}/10</strong>
 
-🌿 Environment:
-{{ENVIRONMENT}}/10
+</div>
+
+
+<div class="rating">
+
+<span>Value</span>
+
+<strong>{{VALUE}}/10</strong>
+
+</div>
+
+
+<div class="rating">
+
+<span>Ambience</span>
+
+<strong>{{ENVIRONMENT}}/10</strong>
+
+</div>
+
+</div>
 
 </p>
 
@@ -335,7 +370,7 @@ height:8px;
 
 
 <h2>
-🍴 Must Try
+🍨 Must Try
 </h2>
 
 
@@ -350,11 +385,10 @@ height:8px;
 
 
 <h2>
-⭐ Honest Review
+✨ My Take
 </h2>
 
-
-<p>
+<p class="review">
 
 {{REVIEW}}
 
@@ -365,15 +399,14 @@ height:8px;
 
 
 <h2>
-👥 Suitable For
+💡 Best For
 </h2>
 
-
-<p>
+<div class="best-for">
 
 {{SUITABLE}}
 
-</p>
+</div>
 
 
 
