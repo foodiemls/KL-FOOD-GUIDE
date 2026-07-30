@@ -82,7 +82,10 @@ html = html.replaceAll(
 item.name
 );
 
-
+html = html.replaceAll(
+"{{HEADLINE}}",
+item.headline
+);
 
 html = html.replaceAll(
 "{{CATEGORY}}",
@@ -271,11 +274,24 @@ item.review
 
 
 
+let suitable = item.suitable.split(",").map(function(item){
+
+return `
+
+<span class="best-tag">
+${item.trim()}
+</span>
+
+`;
+
+}).join("");
+
+
 html = html.replaceAll(
 
 "{{SUITABLE}}",
 
-item.suitable
+suitable
 
 );
 
