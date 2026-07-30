@@ -67,14 +67,12 @@
 
 "priceCategory":"under20",
 
+"headline":"🥭 A refreshing dessert after exploring Petaling Street.",
+  
 "ratings":{
-
 "food":8,
-
 "value":6,
-
 "environment":6
-
 },
 
 "images":[
@@ -94,14 +92,11 @@
 "Taro Mochi Cloud Milk"
 ],
 
-"hours":
-"Daily 12PM - 10PM",
+"hours":"Daily 12PM - 10PM",
 
-"review":
-"The desserts are not overly sweet with layered textures and authentic ingredients.",
+"review":"The desserts are not overly sweet with layered textures and authentic ingredients.",
 
-"suitable":
-"Quick dessert stop after exploring Pasar Seni and Petaling Street."
+"suitable": "Quick dessert stop, Refreshing , Dying of thirst."
 
 }
 
