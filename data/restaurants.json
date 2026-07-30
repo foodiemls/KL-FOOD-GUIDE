@@ -16,14 +16,12 @@
 
 "priceCategory":"under20",
 
+"headline":"🥜 Pistachio lovers shouldn't miss this.",
+
 "ratings":{
-
 "food":7,
-
 "value":6,
-
 "environment":7
-
 },
 
 "images":[
@@ -43,14 +41,11 @@
 "Peanut Butter Gelato"
 ],
 
-"hours":
-"Daily 12PM - 10:30PM",
+"hours":"Daily 12PM - 10:30PM",
 
-"review":
-"The gelato is not overly sweet and has unique flavours that do not taste artificial.",
+"review":"Rich pistachio flavour with a creamy texture. Not overly sweet, and the flavours taste natural.",
 
-"suitable":
-"Friends gathering, couples dessert dates and casual chilling."
+"suitable":"Dessert Dates, Friends Gathering, Pistachio Lovers."
 
 },
 
