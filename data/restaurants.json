@@ -148,6 +148,60 @@
 
 "suitable":"Spicy Lovers, Family Gathering, Dinner in Mall"
 
+},
+
+{
+"id":"huiji",
+
+"name":"辉记小食馆 Restoran Hui Ji",
+
+"category":"chinese",
+
+"location":"Old Klang Road",
+
+"address":"Old Klang Road, Taman Sri Sentosa",
+
+"googleMaps":"https://share.google/imsuvZgeW3xFctUEQ",
+
+"price":"RM15-25",
+
+"priceCategory":"below20",
+
+"headline":"🐟 Craving Fish Head Bee Hoon & Handmade Fish Balls?",
+
+"ratings":{
+"food":7.5,
+"value":9,
+"environment":6
+},
+
+"images":[
+"huiji1.jpeg",
+"huiji2.jpeg",
+"huiji3.jpeg",
+"huiji4.jpeg"
+],
+
+"tags":[
+"Chinese Cuisine",
+"Cheap & Valuable",
+"Authentic Food"
+],
+
+"mustTry":[
+"Fish Head Bee Hoon鱼头米粉",
+"Homemade Fish Ball西刀鱼丸"
+],
+
+"hours":[
+"Daily 9:30AM - 10:00PM ",
+"Some days: Break from 3:00 PM to 5:30 PM"
+]
+
+"review":"Authentic flavours with a comforting touch. Fresh fish, handmade fish balls, and rich broth make every bite incredibly satisfying."
+
+"suitable":"Office Workers, Daily Lunch, Light Food"
+
 }
 
 ]
