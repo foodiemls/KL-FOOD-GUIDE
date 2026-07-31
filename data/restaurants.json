@@ -179,7 +179,7 @@
 "huiji1.jpeg",
 "huiji2.jpeg",
 "huiji3.jpeg",
-"huiji4.jpeg"，
+"huiji4.jpeg",
 "huiji5.jpeg"
 ],
 
@@ -194,12 +194,9 @@
 "Homemade Fish Ball西刀鱼丸"
 ],
 
-"hours":[
-"Daily 9:30AM - 10:00PM ",
-"Some days: Break from 3:00 PM to 5:30 PM"
-]
+"hours":"Daily 9:30AM - 10:00PM<br>Break: 3:00PM - 5:30PM (Some Days)"
 
-"review":"Authentic flavours with a comforting touch. Fresh fish, handmade fish balls, and rich broth make every bite incredibly satisfying."
+"review":"Authentic flavours with a comforting touch. Fresh fish, handmade fish balls, and rich broth make every bite incredibly satisfying.",
 
 "suitable":"Office Workers, Daily Lunch, Light Food"
 
