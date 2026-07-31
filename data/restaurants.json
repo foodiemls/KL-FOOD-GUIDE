@@ -98,6 +98,56 @@
 
 "suitable": "Quick dessert stop, Refreshing , Dying of thirst."
 
+},
+
+{
+"id":"gelulu-gelato",
+
+"name":"胡子大厨 WOK MAN",
+
+"category":"chinese",
+
+"location":"Sunway Velocity",
+
+"address":"Sunway Velocity, Kuala Lumpur",
+
+"googleMaps":"https://share.google/Qnc9uWaNIF0EN2W1G",
+
+"price":"RM40-60",
+
+"priceCategory":"above50",
+
+"headline":"🍚 Authentic flavors, unforgettable taste",
+
+"ratings":{
+"food":8,
+"value":7,
+"environment":8
+},
+
+"images":[
+"huzi1.jpeg",
+"huzi2.jpeg",
+"huzi3.jpeg"
+],
+
+"tags":[
+"Chinese Cuisine",
+"Juicy Pork",
+"Perfect with Rice"
+],
+
+"mustTry":[
+"DongPo Pork 东坡肉",
+"LaZiJi 辣子鸡"
+],
+
+"hours":"Daily 11:00AM - 10:00PM",
+
+"review":"Authentic Chinese dishes packed with rich flavours. Perfect with rice, incredibly satisfying, and full of comforting goodness.",
+
+"suitable":"Spicy Lovers, Family Gathering, Dinner in Mall."
+
 }
 
 ]
